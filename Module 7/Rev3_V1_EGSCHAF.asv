@@ -1,0 +1,24 @@
+% Ella Schafer  Engr 1410-216   3/10/2023
+
+clc;clear;
+%% zeno's Paradox
+Dist=5;
+Steps=0;
+while Dist>1.5*10^-10
+    Dist=Dist/2;
+    Steps=Steps+1;
+end
+
+%% Sample Reduction
+WFull3=readtable("WFull3.m");
+[row,col]=size(WFull3);
+WRed=[];
+for count=2:col
+    Bro=abs(WFull3(2,count)-WFull3(2,count-1));
+    if bro>.25||WFull3(1,count)>WRed(1,count)
+        WRed(2,Count)=WFull3(2,Count);
+        WRed(1,Count)=WFull3(1,Count);
+    end
+end
+
+
